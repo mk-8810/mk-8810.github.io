@@ -1,17 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const consultationBtn = document.querySelector(".hero button");
+  const exploreButton = document.getElementById("explore-button");
 
-  if (consultationBtn) {
-    consultationBtn.addEventListener("click", () => {
-      showConsultationMessage();
+  if (exploreButton) {
+    exploreButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: document.getElementById("works").offsetTop - 50,
+        behavior: "smooth"
+      });
     });
   }
 });
-
-function showConsultationMessage() {
-  const message = `
-    Thank you for your interest in Acme Consulting!
-    A representative will reach out to you shortly to schedule your free consultation.
-  `;
-  alert(message.trim());
-}
