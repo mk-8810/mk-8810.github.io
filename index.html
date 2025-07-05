@@ -2,52 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acme Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[Your Name] – Author & Artist</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container">
-      <h1>Acme Consulting</h1>
+      <h1>[Your Name]</h1>
+      <p class="tagline">Author • Visual Artist • Heir to a Remarkable Story</p>
       <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="nav-links">
+          <li><a href="#works">Works</a></li>
+          <li><a href="#heritage">Heritage</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Business Solutions That Deliver</h2>
-      <p>We help companies streamline operations and grow faster.</p>
-      <button onclick="showAlert()">Get a Free Consultation</button>
-    </section>
-
-    <section class="services">
-      <h3>Our Services</h3>
-      <div class="service-item">
-        <h4>Strategy</h4>
-        <p>Business planning and market research tailored to your goals.</p>
-      </div>
-      <div class="service-item">
-        <h4>Operations</h4>
-        <p>Process optimization to increase efficiency and reduce cost.</p>
-      </div>
-      <div class="service-item">
-        <h4>Technology</h4>
-        <p>Implement scalable digital solutions with our tech experts.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <section class="hero">
     <div class="container">
-      <p>&copy; 2025 Acme Consulting. All rights reserved.</p>
+      <h2>Stories Written in Ink & Blood</h2>
+      <p>Through fiction and canvas, I capture the echoes of my ancestry — stories untold, identities inherited, and visions reborn.</p>
+      <button id="explore-button">Explore My World</button>
+    </div>
+  </section>
+
+  <section id="works" class="gallery container">
+    <h3>Selected Works</h3>
+    <div class="gallery-grid">
+      <div class="work-card">
+        <img src="https://via.placeholder.com/300x200" alt="Book Cover 1" />
+        <p><strong>“Whispers of the Archive”</strong><br/>Literary fiction</p>
+      </div>
+      <div class="work-card">
+        <img src="https://via.placeholder.com/300x200" alt="Painting 1" />
+        <p><strong>“Inheritance”</strong><br/>Acrylic on canvas</p>
+      </div>
+      <div class="work-card">
+        <img src="https://via.placeholder.com/300x200" alt="Book Cover 2" />
+        <p><strong>“Bone Map”</strong><br/>Memoir fragments & poetry</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="heritage" class="about container">
+    <h3>Heritage & Identity</h3>
+    <p>My work is rooted in a lineage shaped by revolution, migration, and myth. I descend from storytellers, poets, and dreamers whose voices continue through my craft.</p>
+    <p>This portfolio is not just my work — it's a continuation of the bloodline that shaped it.</p>
+  </section>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <p>Contact: <a href="mailto:hello@yourname.com">hello@yourname.com</a></p>
+      <p>&copy; 2025 [Your Name]. All rights reserved.</p>
     </div>
   </footer>
 
