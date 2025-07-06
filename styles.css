@@ -109,3 +109,22 @@ body {
   padding: 30px 0;
   font-size: 0.9rem;
 }
+
+.legacy {
+  background-color: #f5f5f5;
+  padding: 3rem 1rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.legacy h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.legacy p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
