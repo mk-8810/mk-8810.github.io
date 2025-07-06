@@ -22,15 +22,17 @@ The main `index.html` auto-detects browser language and redirects to the appropr
 ---
 
 ## 🧭 File Structure
+<pre>
 / (root)
-├── index.html             # Redirects based on user language
-├── index-en.html          # English version
-├── index-ja.html          # Japanese version
-├── index-zh-cn.html       # Simplified Chinese version
-├── index-zh-tw.html       # Traditional Chinese version
+├── index.html              # Redirects based on user language
+├── index-en.html           # English version
+├── index-ja.html           # Japanese version
+├── index-zh-cn.html        # Simplified Chinese version
+├── index-zh-tw.html        # Traditional Chinese version
 └── assets/
-└── css/
-└── styles.css     # Shared stylesheet
+    └── css/
+        └── styles.css      # Shared stylesheet
+</pre>
 
 ---
 
