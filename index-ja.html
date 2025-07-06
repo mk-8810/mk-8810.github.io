@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>瀬戸真由子 – 作家・ビジュアルアーティスト</title>
+  <meta name="description" content="瀬戸真由子の公式ポートフォリオ – 作家、ビジュアルアーティスト、豊かな文化的遺産の継承者。" />
+  <meta name="keywords" content="瀬戸真由子, 作家, ビジュアルアーティスト, ポートフォリオ, 日本の遺産, 多言語対応" />
+  <meta name="author" content="瀬戸真由子" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script>
+    (function() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const langCode = userLang.toLowerCase();
+      const isRoot = location.pathname === '/' || location.pathname.endsWith('index.html');
+      if (isRoot) {
+        if (langCode.startsWith('en')) window.location.href = 'index-en.html';
+        else if (langCode.startsWith('zh-cn') || langCode === 'zh') window.location.href = 'index-zh-cn.html';
+        else if (langCode.startsWith('zh-tw') || langCode.startsWith('zh-hk') || langCode.startsWith('zh-mo')) window.location.href = 'index-zh-tw.html';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">瀬戸真由子</h1>
+      <p class="tagline">作家・ビジュアルアーティスト・生きた遺産の継承者</p>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#works">作品</a></li>
+          <li><a href="#heritage">遺産とアイデンティティ</a></li>
+          <li><a href="#legacy">レガシープロジェクト</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+
+        <div class="language-switcher">
+          <label for="language-select" class="visually-hidden">言語選択</label>
+          <select id="language-select" onchange="switchLanguage(this.value)">
+            <option value="index-en.html">English</option>
+            <option value="index-ja.html" selected>日本語</option>
+            <option value="index-zh-cn.html">简体中文</option>
+            <option value="index-zh-tw.html">繁體中文</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>墨と血で刻まれた物語</h2>
+        <p>フィクションとビジュアルアートを通じて、受け継がれたアイデンティティ、文化の記憶、沈黙からよみがえる物語を探求しています。</p>
+        <a href="#works" class="button">作品を見る</a>
+      </div>
+    </section>
+
+    <section id="works" class="gallery container">
+      <h3>代表作</h3>
+      <div class="gallery-grid">
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="『アーカイブのささやき』書籍カバー" />
+          <p><strong>「アーカイブのささやき」</strong><br />文学フィクション</p>
+        </div>
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="『継承』絵画" />
+          <p><strong>「継承」</strong><br />キャンバスにアクリル</p>
+        </div>
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="『ボーンマップ』カバー" />
+          <p><strong>「ボーンマップ」</strong><br />回想録と詩</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="heritage" class="about container">
+      <h3>遺産とアイデンティティ</h3>
+      <p>私の活動は、移住、革命、神話によって形作られた多世代の物語に根ざしています。物語を紡ぐ者、詩人、夢見る者たちの声を尊重し、その遺産に形を与えています。</p>
+      <p>この作品群は、個人的な表現であると同時に、文化的な継承でもあります。</p>
+    </section>
+
+    <section id="legacy" class="legacy container">
+      <h3>レガシープロジェクト：歴史的エッセイの翻訳</h3>
+      <p>現在進行中の研究・翻訳プロジェクトでは、私の祖先の一人に関する希少な歴史的エッセイを扱っています。文化的・文学的に重要な人物についてのこの数世紀前の作品は、芸術性、亡命、そして不屈の精神に満ちた系譜への洞察を提供します。</p>
+      <p>翻訳されたエッセイは、近い将来このポートフォリオで公開予定です。</p>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <p><strong>お問い合わせ:</strong> <a href="mailto:mayuko.o.official@gmail.com">mayuko.o.official@gmail.com</a></p>
+      <p>&copy; 2025 瀬戸真由子. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function switchLanguage(langPage) {
+      window.location.href = langPage;
+    }
+  </script>
+</body>
+</html>
