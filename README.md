@@ -1,52 +1,73 @@
-# Mayuko Seto – Multilingual Portfolio
+# Mayuko Seto – Multilingual Portfolio Website
 
-This repository contains the multilingual static website for **Mayuko Seto** – author, visual artist, and descendant of a powerful creative lineage. The site is presented in English, Japanese, Simplified Chinese, and Traditional Chinese.
+This is the official multilingual portfolio site of **Mayuko Seto** — author, visual artist, and cultural storyteller.
 
-### 🌐 Live Site
-[View the site here](https://yourdomain.com)  
-*(Replace with actual domain or GitHub Pages URL)*
+🌍 The site is deployed via **GitHub Pages** and includes versions in:
+
+- English (`index-en.html`)
+- 日本語 | Japanese (`index-ja.html`)
+- 简体中文 | Simplified Chinese (`index-zh-cn.html`)
+- 繁體中文 | Traditional Chinese (`index-zh-tw.html`)
+
+The main `index.html` auto-detects browser language and redirects to the appropriate localized version.
 
 ---
 
-## 📁 Contents
+## 🔗 Live Site
 
-- `index.html` – Entry point that detects user language and redirects accordingly.
-- `index-en.html` – English version
-- `index-ja.html` – Japanese version
-- `index-zh-cn.html` – Simplified Chinese version
-- `index-zh-tw.html` – Traditional Chinese version
-- `assets/css/styles.css` – Shared styling for all pages
+> [https://yourusername.github.io/your-repo-name/](https://yourusername.github.io/your-repo-name/)
+
+(Replace with your actual GitHub Pages URL or custom domain)
+
+---
+
+## 🧭 File Structure
+/ (root)
+├── index.html             # Redirects based on user language
+├── index-en.html          # English version
+├── index-ja.html          # Japanese version
+├── index-zh-cn.html       # Simplified Chinese version
+├── index-zh-tw.html       # Traditional Chinese version
+└── assets/
+└── css/
+└── styles.css     # Shared stylesheet
 
 ---
 
 ## ⚠️ Intellectual Property Notice
 
-All written content, translations, artworks, and visual elements in this repository are the intellectual property of **Mayuko Seto**, unless otherwise credited.
+All content, including original writing, artwork, translations, and page layout, is © **Mayuko Seto**.  
+This repository is **public for hosting purposes only**.
 
-**Do not copy, redistribute, or reproduce any text or image without written permission.**  
-The source code is provided for portfolio presentation and language deployment purposes only.
+> No content or design may be copied, reused, or redistributed without explicit permission.
+
+- The text and visuals reflect personal and cultural heritage.
+- This is not an open-source project.
 
 ---
 
 ## 🚫 License
 
-This project is **not open source**.  
-The source code is visible for deployment transparency only. No license is granted for reuse or adaptation.
+This repository is **not licensed for reuse**.  
+Do not fork, clone, or reuse content unless you're part of an approved collaboration.
 
-If you are a potential collaborator, publisher, or representative, feel free to contact via:
+If you're a publisher, press contact, or curator seeking permission, please reach out directly:
 
-📩 **mayuko.o.official@gmail.com**
+📫 **mayuko.o.official@gmail.com**
+
+---
+
+## 🧪 For Development Use (Optional)
+
+If you’re contributing (e.g., assisting with translations or layout):
+
+- Always work in branches.
+- Do not modify `index.html` unless you're editing language detection.
+- Keep layout consistent across all localized files.
+- Styling is centralized in `assets/css/styles.css`.
 
 ---
 
-## 🛠️ For Maintainers
+## ✨ About the Project
 
-If working on this site, please preserve the following:
-
-- Language detection logic in `index.html`
-- Consistent structure and tone across all localized pages
-- Professional layout integrity across screen sizes
-
-Feel free to use feature branches for testing, but avoid committing directly to `main` unless for verified updates.
-
----
+This site reflects not only the author’s creative work but also her **ancestral legacy**, including an ongoing project to translate and interpret a historical essay about a notable ancestor.
