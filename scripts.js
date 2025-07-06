@@ -10,3 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+function switchLanguage(langPage) {
+  window.location.href = langPage;
+}
