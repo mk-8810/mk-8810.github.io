@@ -15,9 +15,7 @@ The main `index.html` auto-detects browser language and redirects to the appropr
 
 ## 🔗 Live Site
 
-> [https://yourusername.github.io/your-repo-name/](https://yourusername.github.io/your-repo-name/)
-
-(Replace with your actual GitHub Pages URL or custom domain)
+> [https://www.mayukoseto.com](https://mk-8810.github.io)
 
 ---
 
