@@ -29,9 +29,13 @@ The main `index.html` auto-detects browser language and redirects to the appropr
 ├── index-ja.html           # Japanese version
 ├── index-zh-cn.html        # Simplified Chinese version
 ├── index-zh-tw.html        # Traditional Chinese version
-└── assets/
-    └── css/
-        └── styles.css      # Shared stylesheet
+├── assets/
+│   └── css/
+│       └── styles.css      # Shared stylesheet
+│   └── js/
+│       └── language-redirect.js  # Optional: external redirect script
+</pre>
+
 </pre>
 
 ---
