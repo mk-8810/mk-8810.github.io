@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="3; url=index-en.html" />
+  <meta name="robots" content="noindex" />
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #444;
+    }
+    .message {
+      max-width: 600px;
+      margin: auto;
+    }
+    .loading {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <h1>Redirecting Based on Your Language...</h1>
+    <p class="loading">If you are not redirected, <a href="index-en.html">click here to continue</a>.</p>
+  </div>
+
+  <script>
+    (function() {
+      const userLang = navigator.language || navigator.userLanguage; // e.g., "en-US", "ja", "zh-CN"
+      const langCode = userLang.toLowerCase();
+      const isRootPage = location.pathname === '/' || location.pathname.endsWith('index.html');
+
+      if (isRootPage) {
+        let redirectPage = 'index-en.html'; // fallback
+
+        if (langCode.startsWith('ja')) {
+          redirectPage = 'index-ja.html';
+        } else if (langCode.startsWith('zh-cn') || langCode === 'zh') {
+          redirectPage = 'index-zh-cn.html';
+        } else if (langCode.startsWith('zh-tw') || langCode.startsWith('zh-hk') || langCode.startsWith('zh-mo')) {
+          redirectPage = 'index-zh-tw.html';
+        }
+
+        const currentFile = window.location.pathname.split('/').pop();
+        if (currentFile !== redirectPage) {
+          window.location.href = redirectPage;
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
