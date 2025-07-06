@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>濑户真由子 – 作家 & 视觉艺术家</title>
+  <meta name="description" content="濑户真由子官方作品集 – 作家、视觉艺术家，丰富文化遗产的继承者。" />
+  <meta name="keywords" content="濑户真由子, 作家, 视觉艺术家, 作品集, 日本遗产, 多语言" />
+  <meta name="author" content="濑户真由子" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script>
+    (function() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const langCode = userLang.toLowerCase();
+      const isRoot = location.pathname === '/' || location.pathname.endsWith('index.html');
+      if (isRoot) {
+        if (langCode.startsWith('en')) window.location.href = 'index-en.html';
+        else if (langCode.startsWith('ja')) window.location.href = 'index-ja.html';
+        else if (langCode.startsWith('zh-tw') || langCode.startsWith('zh-hk') || langCode.startsWith('zh-mo')) window.location.href = 'index-zh-tw.html';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">濑户真由子</h1>
+      <p class="tagline">作家 • 视觉艺术家 • 活生生的传承者</p>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#works">作品</a></li>
+          <li><a href="#heritage">传承与身份</a></li>
+          <li><a href="#legacy">遗产项目</a></li>
+          <li><a href="#contact">联系方式</a></li>
+        </ul>
+
+        <div class="language-switcher">
+          <label for="language-select" class="visually-hidden">语言选择</label>
+          <select id="language-select" onchange="switchLanguage(this.value)">
+            <option value="index-en.html">English</option>
+            <option value="index-ja.html">日本語</option>
+            <option value="index-zh-cn.html" selected>简体中文</option>
+            <option value="index-zh-tw.html">繁體中文</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>用墨与血书写的故事</h2>
+        <p>通过小说与视觉艺术，我探索继承的身份、文化记忆和从沉默中重生的叙事。</p>
+        <a href="#works" class="button">浏览作品</a>
+      </div>
+    </section>
+
+    <section id="works" class="gallery container">
+      <h3>精选作品</h3>
+      <div class="gallery-grid">
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="档案的低语封面" />
+          <p><strong>《档案的低语》</strong><br />文学小说</p>
+        </div>
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="传承画作" />
+          <p><strong>《传承》</strong><br />亚克力画布</p>
+        </div>
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="骨图封面" />
+          <p><strong>《骨图》</strong><br />回忆录与诗歌</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="heritage" class="about container">
+      <h3>传承与身份</h3>
+      <p>我的创作根植于由革命、迁徙与神话塑造的多代故事。我尊重那些讲述者、诗人和梦想家的声音，并通过我的艺术赋予他们生命。</p>
+      <p>这不仅是个人表达，更是文化的延续。</p>
+    </section>
+
+    <section id="legacy" class="legacy container">
+      <h3>遗产项目：历史性文章翻译</h3>
+      <p>目前正在进行一项研究与翻译项目，涉及一篇关于我的一位祖先的珍贵历史性文章——这位祖先在文化和文学上都有
