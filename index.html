@@ -2,64 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>[Mayuko Seto] – Author & Artist</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayuko Seto – Author & Visual Artist</title>
+  <meta name="description" content="Official portfolio of Mayuko Seto – author, visual artist, and descendant of a rich cultural legacy." />
+  <meta name="keywords" content="Mayuko Seto, Author, Visual Artist, Portfolio, Japanese Heritage, Multilingual Artist" />
+  <meta name="author" content="Mayuko Seto" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <h1>[Mayuko Seto]</h1>
-      <p class="tagline">Author • Visual Artist • Heir to a Remarkable Story</p>
-      <nav>
+      <h1 class="site-title">Mayuko Seto</h1>
+      <p class="tagline">Author • Visual Artist • Heir to a Living Legacy</p>
+
+      <nav class="main-nav">
         <ul class="nav-links">
           <li><a href="#works">Works</a></li>
           <li><a href="#heritage">Heritage</a></li>
+          <li><a href="#legacy">Legacy Project</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <div class="language-switcher">
+          <label for="language-select" class="visually-hidden">Language</label>
+          <select id="language-select" onchange="switchLanguage(this.value)">
+            <option value="index-en.html" selected>English</option>
+            <option value="index-ja.html">日本語</option>
+            <option value="index-zh-cn.html">简体中文</option>
+            <option value="index-zh-tw.html">繁體中文</option>
+          </select>
+        </div>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Stories Written in Ink & Blood</h2>
-      <p>Through fiction and canvas, I capture the echoes of my ancestry — stories untold, identities inherited, and visions reborn.</p>
-      <button id="explore-button">Explore My World</button>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Stories Etched in Ink and Lineage</h2>
+        <p>Through fiction and visual art, I explore inherited identities, cultural memory, and narratives reborn from silence.</p>
+        <a href="#works" class="button">Explore the Portfolio</a>
+      </div>
+    </section>
 
-  <section id="works" class="gallery container">
-    <h3>Selected Works</h3>
-    <div class="gallery-grid">
-      <div class="work-card">
-        <img src="https://via.placeholder.com/300x200" alt="Book Cover 1" />
-        <p><strong>“Whispers of the Archive”</strong><br/>Literary fiction</p>
+    <section id="works" class="gallery container">
+      <h3>Featured Works</h3>
+      <div class="gallery-grid">
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="Whispers of the Archive book cover" />
+          <p><strong>“Whispers of the Archive”</strong><br />Literary Fiction</p>
+        </div>
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="Inheritance painting" />
+          <p><strong>“Inheritance”</strong><br />Acrylic on Canvas</p>
+        </div>
+        <div class="work-card">
+          <img src="https://via.placeholder.com/300x200" alt="Bone Map cover" />
+          <p><strong>“Bone Map”</strong><br />Memoir & Poetry</p>
+        </div>
       </div>
-      <div class="work-card">
-        <img src="https://via.placeholder.com/300x200" alt="Painting 1" />
-        <p><strong>“Inheritance”</strong><br/>Acrylic on canvas</p>
-      </div>
-      <div class="work-card">
-        <img src="https://via.placeholder.com/300x200" alt="Book Cover 2" />
-        <p><strong>“Bone Map”</strong><br/>Memoir fragments & poetry</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="heritage" class="about container">
-    <h3>Heritage & Identity</h3>
-    <p>My work is rooted in a lineage shaped by revolution, migration, and myth. I descend from storytellers, poets, and dreamers whose voices continue through my craft.</p>
-    <p>This portfolio is not just my work — it's a continuation of the bloodline that shaped it.</p>
-  </section>
+    <section id="heritage" class="about container">
+      <h3>Heritage & Identity</h3>
+      <p>My practice is shaped by a multigenerational narrative of migration, revolution, and myth. I honor the voices of those who came before me—storytellers, poets, and visionaries—by giving form to their legacy.</p>
+      <p>This body of work is both personal expression and cultural continuation.</p>
+    </section>
+
+    <section id="legacy" class="legacy container">
+      <h3>Legacy Project: Translating a Historical Essay</h3>
+      <p>Currently underway is a research and translation project involving a rare historical essay about one of my ancestors — a figure of cultural and literary significance. The work, written centuries ago, offers insight into a lineage of artistry, exile, and resilience that continues to inform my practice today.</p>
+      <p>The translated essay will be made available as part of this portfolio in the near future.</p>
+    </section>
+  </main>
 
   <footer id="contact" class="site-footer">
     <div class="container">
-      <p>Contact: <a href="mailto:mayuko.o.official@gmail.com">mayuko.o.official@gmail.com</a></p>
-      <p>&copy; 2025 [Mayuko Seto]. All rights reserved.</p>
+      <p><strong>Contact:</strong> <a href="mailto:mayuko.o.official@gmail.com">mayuko.o.official@gmail.com</a></p>
+      <p>&copy; 2025 Mayuko Seto. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script>
+    function switchLanguage(langPage) {
+      window.location.href = langPage;
+    }
+  </script>
 </body>
 </html>
