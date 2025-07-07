@@ -28,6 +28,7 @@ The main `index.html` auto-detects browser language and redirects to the appropr
 ├── index-zh-cn.html        # Simplified Chinese version
 ├── index-zh-tw.html        # Traditional Chinese version
 ├── assets/
+│   ├── images/
 │   └── css/
 │       └── styles.css      # Shared stylesheet
 │   └── js/
