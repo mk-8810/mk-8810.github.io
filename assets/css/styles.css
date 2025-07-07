@@ -170,3 +170,18 @@ body {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+/* Replace the emoji span with an inline SVG */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+
+.language-switcher .globe-icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  stroke: #555;
+}
