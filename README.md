@@ -32,8 +32,8 @@ The main `index.html` auto-detects browser language and redirects to the appropr
 │   └── css/
 │       └── styles.css      # Shared stylesheet
 │   └── js/
-│       └── script.js  # Optional: external redirect script
-├── press/               Optional:
+│       └── script.js       # External redirect script
+├── press/
 ├── contact/
 </pre>
 
