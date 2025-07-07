@@ -128,3 +128,45 @@ body {
   line-height: 1.7;
   color: #555;
 }
+/* language switcher visual features */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+
+.language-switcher .globe-icon {
+  font-size: 1rem;
+  line-height: 1;
+  color: #555;
+}
+
+.language-switcher select {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.language-switcher select:hover,
+.language-switcher select:focus {
+  border-color: #999;
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
