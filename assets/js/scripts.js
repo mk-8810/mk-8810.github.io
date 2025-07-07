@@ -90,3 +90,22 @@ document.addEventListener("DOMContentLoaded", () => {
 function switchLanguage(langPage) {
   window.location.href = langPage;
 }
+
+
+// Save selected language
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("language-select");
+
+  // Load previous selection if available
+  const savedLang = localStorage.getItem("preferredLanguage");
+  if (savedLang && select) {
+    select.value = savedLang;
+  }
+
+  // Handle user change
+  select?.addEventListener("change", () => {
+    const selectedLang = select.value;
+    localStorage.setItem("preferredLanguage", selectedLang);
+    window.location.href = selectedLang;
+  });
+});
