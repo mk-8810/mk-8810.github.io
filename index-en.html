@@ -25,12 +25,18 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <!-- Language Switcher with Globe Icon -->
         <div class="language-switcher">
-          <span class="globe-icon" aria-hidden="true">🌐</span>
+          <span class="globe-icon" aria-hidden="true">
+            <!-- Simple SVG Globe Icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#555" stroke-width="2" />
+              <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke="#555" stroke-width="2" fill="none"/>
+            </svg>
+          </span>
+
           <label for="language-select" class="visually-hidden">Select Language</label>
-          <select id="language-select" onchange="switchLanguage(this.value)">
-            <option value="index-en.html" selected>English</option>
+          <select id="language-select">
+            <option value="index-en.html">English</option>
             <option value="index-ja.html">日本語</option>
             <option value="index-zh-cn.html">简体中文</option>
             <option value="index-zh-tw.html">繁體中文</option>
