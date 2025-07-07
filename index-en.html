@@ -25,9 +25,10 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <!--  Only one language switcher -->
+        <!-- Language Switcher with Globe Icon -->
         <div class="language-switcher">
-          <label for="language-select" class="visually-hidden">Language</label>
+          <span class="globe-icon" aria-hidden="true">🌐</span>
+          <label for="language-select" class="visually-hidden">Select Language</label>
           <select id="language-select" onchange="switchLanguage(this.value)">
             <option value="index-en.html" selected>English</option>
             <option value="index-ja.html">日本語</option>
@@ -35,6 +36,7 @@
             <option value="index-zh-tw.html">繁體中文</option>
           </select>
         </div>
+       
       </nav>
     </div>
   </header>
