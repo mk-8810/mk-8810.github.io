@@ -9,15 +9,8 @@
   <meta name="author" content="Mayuko Seto" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script src="assets/js/script.js" defer></script>
-  <div class="language-switcher">
-    <select onchange="switchLanguage(this.value)">
-      <option value="index-en.html">English</option>
-      <option value="index-ja.html">日本語</option>
-      <option value="index-zh-cn.html">简体中文</option>
-      <option value="index-zh-tw.html">繁體中文</option>
-    </select>
-  </div>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
@@ -32,6 +25,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
 
+        <!--  Correctly placed language switcher -->
         <div class="language-switcher">
           <label for="language-select" class="visually-hidden">Language</label>
           <select id="language-select" onchange="switchLanguage(this.value)">
@@ -92,10 +86,5 @@
     </div>
   </footer>
 
-  <script>
-    function switchLanguage(langPage) {
-      window.location.href = langPage;
-    }
-  </script>
 </body>
 </html>
