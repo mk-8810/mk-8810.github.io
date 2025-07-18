@@ -64,7 +64,7 @@ If you're a publisher, press contact, or curator seeking permission, please reac
 
 ---
 
-## 🧪 For Development Use (Optional)
+## 🧪 For Development Use
 
 If you’re contributing (e.g., assisting with translations or layout):
 
