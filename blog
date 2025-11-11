@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Redirecting...</title>
 
-**HTML + CSS + JS Blog Embed Code**
+<!-- **HTML + CSS + JS Blog Embed Code** -->
 </head>
 
 <body>
@@ -120,10 +120,16 @@
     blogContainer.appendChild(postDiv);
   });
 </script>
-```
-</body>
----
 
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <p><strong>Contact:</strong> <a href="mailto:mayuko.o.official@gmail.com">mayuko.o.official@gmail.com</a></p>
+      <p>&copy; 2025 Mayuko Seto. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+<!--
 ### 💡 How to Use
 
 1. Copy and paste the code inside your website’s `<body>` section.
@@ -131,3 +137,4 @@
 3. You can also load posts dynamically from an external JSON or API later.
 
 ---
+ -->
