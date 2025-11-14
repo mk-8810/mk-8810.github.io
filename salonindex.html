@@ -4,110 +4,117 @@
   <meta charset="UTF-8" />
   <title>Exclusive Daily Blog Posts</title>
   <style>
-    /* --- Blog Section Styles --- */
-    #blog {
-      font-family: 'Arial', sans-serif;
-      padding: 50px 20px;
-      background: #f9f9f9;
-      text-align: center;
-    }
+ /* --- Blog Section Styles --- */
+#blog {
+  font-family: 'Arial', sans-serif;
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
 
-    #blog h2 {
-      font-size: 2em;
-      margin-bottom: 30px;
-      color: #333;
-    }
+#blog h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #333;
+  letter-spacing: 1px;
+}
 
-    /* ✅ Grid for multiple rows */
-    .blog-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+/* 🟦 改良：カードレイアウト */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    .blog-post {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: left;
-      transition: transform 0.3s ease;
-    }
+/* 🟦 改良：カードデザイン */
+.blog-post {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-    .blog-post:hover {
-      transform: translateY(-5px);
-    }
+.blog-post:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
 
-    .blog-post img {
-      width: 100%;
-      border-radius: 10px;
-    }
+/* 🟦 画像の比率を完全統一（16:9） */
+.blog-post img {
+  width: 100%;
+  height: 200px;        /* ← 高さ固定 */
+  object-fit: cover;    /* ← 綺麗にトリミング */
+  display: block;
+}
 
-    .blog-post h3 {
-      margin: 15px 0 10px;
-      color: #222;
-    }
+/* 🟦 改良：文字レイアウト */
+.blog-post h3 {
+  margin: 18px 15px 10px;
+  font-size: 1.2em;
+  color: #222;
+  line-height: 1.35;
+}
 
-    .blog-post p {
-      color: #555;
-      font-size: 0.95em;
-    }
+.blog-post p {
+  margin: 0 15px 15px;
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.55;
+}
 
-    .read-more {
-      display: inline-block;
-      margin-top: 10px;
-      color: #0077ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.read-more {
+  display: inline-block;
+  margin: 0 15px 20px;
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .read-more:hover {
-      text-decoration: underline;
-    }
+.read-more:hover {
+  text-decoration: underline;
+}
 
-    /* ✅ Responsive layout */
-    @media (min-width: 768px) {
-      .blog-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
+/* ---- Responsive ---- */
+@media (min-width: 768px) {
+  .blog-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-    @media (max-width: 767px) {
-      .blog-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+@media (max-width: 767px) {
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @media (max-width: 480px) {
-      .blog-container {
-        grid-template-columns: 1fr;
-      }
-    }
+  .blog-post img {
+    height: 160px;  /* スマホ用に少し低めに */
+  }
 
-    /* --- Footer Styles --- */
-    .site-footer {
-      background: #f1f1f1;
-      padding: 25px 0;
-      text-align: center;
-      color: #333;
-      font-family: 'Arial', sans-serif;
-      font-size: 0.85em; /* smaller text */
-    }
+  .blog-post h3 {
+    font-size: 1.1em;
+  }
+}
 
-    .site-footer a {
-      color: #0077ff;
-      text-decoration: none;
-    }
+@media (max-width: 480px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
 
-    .site-footer a:hover {
-      text-decoration: underline;
-    }
+  .blog-post img {
+    height: 180px;  /* 大きめで見やすく */
+  }
 
-    .site-footer p {
-      margin: 5px 0;
-    }
+  .blog-post {
+    margin: 0 10px;
+  }
+
+  #blog h2 {
+    font-size: 1.8em;
+  }
+}
   </style>
 </head>
 
@@ -127,6 +134,8 @@
       <p>&copy; 2025 Mayuko Seto. All rights reserved.</p>
     </div>
   </footer>
+
+  
 
 <script>
   // --- Blog Data ---
