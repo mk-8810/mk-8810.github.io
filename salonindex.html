@@ -152,7 +152,7 @@
 
   // --- Infinite Scroll Setup ---
   let loadedCount = 0;
-  const batchSize = 6; // 一度に読み込む件数
+  const batchSize = 32; // 一度に読み込む件数
 
   function loadMorePosts() {
     for (let i = 0; i < batchSize; i++) {
