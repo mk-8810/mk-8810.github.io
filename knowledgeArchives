@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exclusive Daily Blog Posts</title>
+  <style>
+ /* --- Blog Section Styles --- */
+#blog {
+  font-family: 'Arial', sans-serif;
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#blog h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* 🟦 改良：カードレイアウト */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 🟦 改良：カードデザイン */
+.blog-post {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* 🟦 画像の比率を完全統一（16:9） */
+.blog-post img {
+  width: 100%;
+  height: 200px;        /* ← 高さ固定 */
+  object-fit: cover;    /* ← 綺麗にトリミング */
+  display: block;
+}
+
+/* 🟦 改良：文字レイアウト */
+.blog-post h3 {
+  margin: 18px 15px 10px;
+  font-size: 1.2em;
+  color: #222;
+  line-height: 1.35;
+}
+
+.blog-post p {
+  margin: 0 15px 15px;
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.55;
+}
+
+.read-more {
+  display: inline-block;
+  margin: 0 15px 20px;
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive ---- */
+@media (min-width: 768px) {
+  .blog-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-post img {
+    height: 160px;  /* スマホ用に少し低めに */
+  }
+
+  .blog-post h3 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-post img {
+    height: 180px;  /* 大きめで見やすく */
+  }
+
+  .blog-post {
+    margin: 0 10px;
+  }
+
+  #blog h2 {
+    font-size: 1.8em;
+  }
+}
+  </style>
+</head>
+
+
+
+
+<body>
+  <!-- 🌐 Blog Section -->
+  <section id="blog">
+    <h2>【公開準備中】Exclusive Daily Blog Posts</h2>
+    <div style="text-align:center;">
+      <iframe
+        src="https://player.twitch.tv/?channel=mmmayukochanjanaiyo&parent=mayukoseto.com/salonindex.html"
+        height="480"
+        width="854"
+        allowfullscreen="true">
+      </iframe>
+    </div>
+    <div class="blog-container" id="blogContainer"></div>
+  </section>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <p><strong>Contact:</strong> <a href="mailto:mayuko.o.official@gmail.com">mayuko.o.official@gmail.com</a></p>
+      <p>&copy; 2025 Mayuko Seto. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+<script>
+  // --- Blog Data ---
+  const blogPosts = [
+    { title: "Hannibal Risingtと人生について", image: "photo/IMG_6778.JPG", excerpt: "Learn practical tips.", link: "blogs/20251103T0000+0100ハンニバルライジングと人生について.html" },
+    { title: "マティーニで知るバーの実力", image: "photo/IMG_6561.JPG", excerpt: "Explore the latest trends.", link: "blog/" },
+    { title: "ECOC2025にLisconnのVice Presidentに雇われて出た話", image: "photo/IMUCE5640.JPG", excerpt: "JS for beginners.", link: "blogs/20251115T0630+0100.html" },
+    { title: "静かなクラブVeskarietで踊った", image: "photo/IMG_6761.PNG", excerpt: "Brand identity tips.", link: "blog/" },
+    { title: "ダンサーとしての私を愛してくれるあなたに", image: "photo/IMG_2475.JPG", excerpt: "AI creativity.", link: "blog/" },
+    { title: "パイプオルガン奏者としての私", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "海外で落とし物をした場合【スウェーデンの場合】", image: "photo/IMG_6778.JPG", excerpt: "海外での落とし物.", link: "blog/" },
+  
+    { title: "旅先に持ってきてよかった物5選！", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "旅先に持ってきてよかった物5選！パート2！", image: "photo/IMG_2475.JPG", excerpt: "AI creativity.", link: "blog/" },
+    { title: "旅先に持ってくればよかった物5選！", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "私が今回しくじったなと思っていること、物資の消費タイミングとあいさつとしての贈り物", image: "photo/IMG_2475.JPG", excerpt: "AI creativity.", link: "blogs/220251112T1012+0100私が今回しくじったなと思っていること…物資の消費タイミングとあいさつとしての贈り物.html" },
+    { title: "ラグジュアリーと安全の類似と違い", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+
+    { title: "米国企業LisconnのVice Presidentはどんな人物だったのか？私がタクシーで吐いた時", image: "photo/IMG_2475.JPG", excerpt: "AI creativity.", link: "blog/" },
+    { title: "オスロ大学に行った後のレポート", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "マルメ大学の大学病院に行った！というか入院していた話", image: "photo/IMG_2475.JPG", excerpt: "AI creativity.", link: "blog/" },
+    { title: "マルメ大学病院内入院病棟の中、ワイヤークラフトのヒーリング", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "ファンデ！メイク！バンコクとオスロでは物凄く変えないといけない！だれもしていない話", image: "photo/IMG_4511.PNG", excerpt: "AI creativity.", link: "blog/" },
+    { title: "私だってほしい", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "重い話ムハンマドとメーメトと彼、そして私は？", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "L夫人について", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "縫物をしながらの旅路", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "銭婆、あるいはマイナー作品『星を買った日』のニーニャみたいな強い女の隠遁生活", image: "photo/IMG_4798.JPG", excerpt: "Remote work tips.", link: "blog/" },
+    { title: "匂い", image: "photo/IMG_4798.JPG", excerpt: "scent", link: "blog/20251115T0630+0100匂い.html" },
+    { title: "五穀米とエビのチキンスープと今日の一日と私", image: "photo/IMG_4798.JPG", excerpt: "recepi", link: "blog/20251118T1830+0700五穀米とエビのチキンスープと今日の一日と私.html" }
+  ];
+
+  const blogContainer = document.getElementById('blogContainer');
+
+  // --- Infinite Scroll Setup ---
+  let loadedCount = 0;
+  const batchSize = 128; // 一度に読み込む件数
+
+  function loadMorePosts() {
+    for (let i = 0; i < batchSize; i++) {
+      const index = (loadedCount + i) % blogPosts.length; // 無限ループ
+      const post = blogPosts[index];
+
+      const postDiv = document.createElement('div');
+      postDiv.classList.add('blog-post');
+      postDiv.innerHTML = `
+        <img src="${post.image}" alt="${post.title}">
+        <h3>${post.title}</h3>
+        <p>${post.excerpt}</p>
+        <a class="read-more" href="${post.link}">Read More →</a>
+      `;
+      blogContainer.appendChild(postDiv);
+    }
+    loadedCount += batchSize;
+  }
+
+  // 最初に表示
+  loadMorePosts();
+
+  // --- Infinite Scroll Trigger ---
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.innerHeight + window.scrollY;
+    const documentHeight = document.body.offsetHeight;
+
+    // 下から300pxの位置でトリガー
+    if (scrollPosition >= documentHeight - 300) {
+      loadMorePosts();
+    }
+  });
+</script>
+</body>
+</html>
