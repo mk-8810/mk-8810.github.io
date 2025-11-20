@@ -3,29 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LabNotes: Thought Archive</title>
+  <title>LabNotes — Unified Player Archive</title>
 
   <style>
     body {
       font-family: system-ui, sans-serif;
-      margin: 0;
       background: #fafafa;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      padding-bottom: 50px;
     }
 
     header {
-      background: #1a1a1a;
+      background: #111;
       color: white;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
     }
 
-    h1 {
-      margin: 0;
-      font-weight: 500;
-      letter-spacing: 1px;
-    }
+    h1 { font-size: 28px; margin: 0; }
 
     .container {
       max-width: 900px;
@@ -33,10 +28,28 @@
       padding: 0 20px;
     }
 
+    /* PLAYER POPUP */
+    #playerBox {
+      background: white;
+      border: 2px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    #mainPlayer {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
     h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
       margin-top: 40px;
+      border-bottom: 2px solid #e3e3e3;
+      padding-bottom: 5px;
     }
 
     .item {
@@ -44,89 +57,102 @@
       padding: 15px;
       margin: 20px 0;
       border-radius: 8px;
-      border: 1px solid #e1e1e1;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      border: 1px solid #e5e5e5;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .item:hover {
+      background: #f2f2f2;
     }
 
     .caption {
-      margin-top: 10px;
+      margin-top: 6px;
       font-size: 14px;
       color: #555;
-    }
-
-    audio, video {
-      width: 100%;
-      margin-top: 10px;
-      border-radius: 4px;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>LabNotes — Thought Archive</h1>
-  </header>
 
-  <div class="container">
-    <!-- AUDIO SECTION -->
-    <h2>Audio Records</h2>
-    <div id="audio-list"></div>
+<header>
+  <h1>LabNotes — Unified Archive Player</h1>
+</header>
 
-    <!-- VIDEO SECTION -->
-    <h2>Video Records</h2>
-    <div id="video-list"></div>
+<div class="container">
+
+  <!-- PLAYER POPUP -->
+  <div id="playerBox">
+    <strong id="playerTitle">Select a record or video</strong>
+    <video id="mainPlayer" controls></video>
   </div>
 
-  <script>
-    // Example Data — You can add hundreds or thousands here
-    const audioRecords = [
-      {
-        title: "Record #01 — Initial Idea",
-        src: "audio/record1.mp3",
-        caption: "A brief explanation of the initial concept and background thinking."
-      },
-      {
-        title: "Record #02 — Concept Expansion",
-        src: "audio/record2.mp3",
-        caption: "An extended reflection on the second stage of idea development."
-      }
-    ];
+  <!-- AUDIO LIST -->
+  <h2>Audio Records</h2>
+  <div id="audio-list"></div>
 
-    const videoRecords = [
-      {
-        title: "Video #01 — Prototype Demo",
-        src: "videos/demo1.mp4",
-        caption: "A demonstration of the first working prototype, including discussion."
-      },
-      {
-        title: "Video #02 — Field Notes",
-        src: "videos/field_notes.mp4",
-        caption: "Observational footage with commentary explaining the context."
-      }
-    ];
+  <!-- VIDEO LIST -->
+  <h2>Video Records</h2>
+  <div id="video-list"></div>
 
-    function renderList(data, container, type) {
-      data.forEach((item) => {
-        const block = document.createElement("div");
-        block.className = "item";
+</div>
 
-        block.innerHTML = `
-          <strong>${item.title}</strong>
-          <br />
-          ${
-            type === "audio"
-              ? `<audio controls src="${item.src}"></audio>`
-              : `<video controls src="${item.src}"></video>`
-          }
-          <div class="caption">${item.caption}</div>
-        `;
 
-        container.appendChild(block);
-      });
+<script>
+  const audioRecords = [
+    {
+      title: "Record #01 — Initial Idea",
+      src: "audio/record1.mp3",
+      caption: "A brief explanation of the initial concept."
+    },
+    {
+      title: "Record #02 — Concept Expansion",
+      src: "audio/record2.mp3",
+      caption: "Thoughts on the conceptual extension."
     }
+  ];
 
-    renderList(audioRecords, document.getElementById("audio-list"), "audio");
-    renderList(videoRecords, document.getElementById("video-list"), "video");
-  </script>
+  const videoRecords = [
+    {
+      title: "Video #01 — Prototype Demo",
+      src: "videos/demo1.mp4",
+      caption: "Walkthrough of the first prototype."
+    },
+    {
+      title: "Video #02 — Field Notes",
+      src: "videos/fieldnotes.mp4",
+      caption: "Ambient footage with commentary."
+    }
+  ];
+
+  const player = document.getElementById("mainPlayer");
+  const playerTitle = document.getElementById("playerTitle");
+
+  function loadItem(item, type) {
+    player.src = item.src;
+    playerTitle.textContent = item.title;
+    player.load();
+    player.play();
+  }
+
+  function renderList(data, container, type) {
+    data.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.innerHTML = `
+        <strong>${item.title}</strong>
+        <div class="caption">${item.caption}</div>
+      `;
+
+      div.addEventListener("click", () => loadItem(item, type));
+      container.appendChild(div);
+    });
+  }
+
+  renderList(audioRecords, document.getElementById("audio-list"), "audio");
+  renderList(videoRecords, document.getElementById("video-list"), "video");
+</script>
+
 </body>
 </html>
