@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ファンデ！メイク！バンコクとオスロでは物凄く変えないといけない！だれもしていない話 Mayuko’s Blog</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      background: #fafafa;
+    }
+
+    header {
+      background: #0077ff;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    main img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #222;
+      margin-top: 1.2em;
+    }
+
+    p {
+      margin: 15px 0;
+      font-size: 1.05em;
+      color: #555;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #0077ff;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #f1f1f1;
+      font-size: 0.9em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ファンデ！メイク！バンコクとオスロでは物凄く変えないといけない！だれもしていない話</h1>
+    <p>by Mayuko Seto • November 21, 2025</p>
+  </header>
+
+  <main>
+    <img src="../photo/IMG_0023.jpeg" alt="ファンデ！メイク！バンコクとオスロでは物凄く変えないといけない！だれもしていない話">
+
+     <h2>ファンデ！メイク！バンコクとオスロでは物凄く変えないといけない！だれもしていない話</h2>
+     <p>前評判で、割と有名な話として、ヨーロッパの女性は普段はメイクをしない、とかって日本では言われている。</p>
+     <p>私の親族の尊属全員がヨーロッパ経験者なので、私は何となく、誰から聞いたでもない日本中で信じられている噂を信じていた。女の人達はメイクをしていないだろうな、と。一方では私はアジア人で、うっすら確実に白人郵政思想のあるだろうヨーロッパでは毎日ばっちりメイクをする必要があるだろうな、と考えていた。</p>
+     <p></p>
+     <p>ヨーロッパに私の伯父の一人がもう何十年も暮らしている。彼の話によると、レディーファーストの染みついた彼が知人女性のためにドアを開けたら、その女性が滅茶苦茶に怒った、という。理由は”あんたなんかに女性扱いされて小さいものみたいにされたくない”という理屈。細かい色々な機微があって、男女平等が特に北欧女性にはこんな形で出る時がある。</p>
+     <p></p>
+     <p>一人ひとり、いろいろな属性を背負っている中で、いろいろな要素を理解しつつ、なるべく高い水準に物事が進むように工夫する必要があるのがヨーロッパだと私は感じる。</p>
+     <p></p>
+     <p></p>
+     <p>ここまで読めば明白だけど、ヨーロッパ女性はちゃんとメイクをしている。本当に。いったいどこから彼女たちがメイクをしないという噂が始まったのか分からないくらい、ちゃんとメイクをして街を歩いている。</p>
+     <p>いったいどこから彼女たちがメイクをしないという噂が始まったのか分からないくらい、ちゃんとメイクをして街を歩いている。</p>
+     <p></p>
+     <p>私のメイクの話にやっと移れる。</p>
+     <p></p>
+
+
+    <br>
+    <p></p>
+  </main>
+
+
+  
+  <footer>
+    <p>&copy; 2025 Mayuko Seto. All rights reserved.</p>
+  </footer>
+</body>
+</html>
