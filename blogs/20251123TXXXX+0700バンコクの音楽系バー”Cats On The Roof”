@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バンコクの音楽系バー”Cats On The Roof” Mayuko’s Blog</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      background: #fafafa;
+    }
+
+    header {
+      background: #0077ff;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    main img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #222;
+      margin-top: 1.2em;
+    }
+
+    p {
+      margin: 15px 0;
+      font-size: 1.05em;
+      color: #555;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #0077ff;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #f1f1f1;
+      font-size: 0.9em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>バンコクの音楽系バー”Cats On The Roof”</h1>
+    <p>by Mayuko Seto • November 20251123, 2025</p>
+  </header>
+
+  <main>
+     <h2>バンコクの音楽系バー”Cats On The Roof”</h2>
+     <p></p>
+     <p>Rathadaphisekという駅から、週末のマーケットで有名なチャトチャックまでの徒歩移動を決行した。理由は、楽しそうだから。強い太陽光を避けて、日没後に出発した。街を歩くと、その街並みの景色だけで色んな情報が掴める。日曜日の夕方は、商売人が一番疲れていて、買い手にとってはいい時刻だ。そうでしょう？</p>
+     <p></p>
+     <p>少し自信がないながら、1時間弱歩いてチャトチャックに着いた。香りのアイテムがスーツケースの中で足りなくなってきていたので補充しつつ道を訊いた。次はMBKセンターに行くつもりだった。</p>
+     <p></p>
+     <p>Grabタクシーを頼んでタクシー1000円位でMBKセンターに着いた。日本だと5倍くらいかかる距離だな、とか思った。タイの道路事情は一通が多くて、地図上の距離と実際の移動距離の間が頻繁にかけ離れる。</p>
+     <p></p>
+     <p></p>
+     <p>MBKセンターの用事は、買い物じゃなかった。売り物だった。前回に行った時に売れるかどうかの交渉をやっており、いらない物を売り飛ばそうとしていた。理由はおもしろいから。結局思い通りにはいかなくて、小売業の参入障壁についてちょっと知見を得たりしていた。</p>
+     <p></p>
+     <p>すっかり歩きすぎで疲れたので、空気管が自分に近いバーに吸い込まれた。Jim Beamをロックで頼んで生演奏を聴いた。ほんとうにこういうのが落ち着く。屋根の上の猫たちという意味のこのバーは割とおすすめかもしれない。</p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p>そんな一日。</p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <br>
+     <img src="../photo/IMG_0000000000.JPG" alt="バンコクの音楽系バー”Cats On The Roof”">
+     <a href="../salonindex.html" class="back-link">← Back to Blog</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mayuko Seto. All rights reserved.</p>
+  </footer>
+</body>
+</html>
