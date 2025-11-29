@@ -177,7 +177,7 @@
       </iframe>
     </div>
     <h3>Real Life Live</h3>
-    <p>リアルタイム映像！オフライン時はアーカイブを再生します。</p>
+    <p>リアルタイム映像！オフライン時はアーカイブが流れますのでご覧ください。</p>
   </div>
   </div>
 
@@ -196,7 +196,6 @@
   const twitchPlayer = document.getElementById("twitchPlayer");
   const liveURL = "https://player.twitch.tv/?channel=mmmayukochanjanaiyo&parent=www.mayukoseto.com&parent=mayukoseto.com";
   const digestURL = "https://player.twitch.tv/?video=2573026029&parent=www.mayukoseto.com"; 
-  // ↑ あなたのダイジェスト動画IDに置き換えてね！
 
   // 3秒経ってもロードされなければ「オフライン」と判断
  setTimeout(() => {
@@ -205,15 +204,6 @@
     twitchPlayer.src = digestURL;
   }
 }, 3000);
-  
-  
-//  setTimeout(() => {
-    // Twitch のプレイヤーがロード失敗すると contentWindow が null のまま
-//    if (!twitchPlayer.contentWindow) {
-//     console.log("Twitch offline → digest に切替");
-//      twitchPlayer.src = digestURL;
-//    }
-//  }, 3000);  
   
 
   
