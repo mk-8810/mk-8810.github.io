@@ -199,13 +199,21 @@
   // ↑ あなたのダイジェスト動画IDに置き換えてね！
 
   // 3秒経ってもロードされなければ「オフライン」と判断
-  setTimeout(() => {
+ setTimeout(() => {
+  if (!twitchPlayer.contentDocument) {
+    console.log("Twitch offline → digest に切替");
+    twitchPlayer.src = digestURL;
+  }
+}, 3000);
+  
+  
+//  setTimeout(() => {
     // Twitch のプレイヤーがロード失敗すると contentWindow が null のまま
-    if (!twitchPlayer.contentWindow) {
-      console.log("Twitch offline → digest に切替");
-      twitchPlayer.src = digestURL;
-    }
-  }, 3000);  
+//    if (!twitchPlayer.contentWindow) {
+//     console.log("Twitch offline → digest に切替");
+//      twitchPlayer.src = digestURL;
+//    }
+//  }, 3000);  
   
 
   
