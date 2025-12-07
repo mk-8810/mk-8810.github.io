@@ -1,0 +1,31 @@
+name: "Pages Production Branch Protection"
+target: "branch"
+enforcement: "active"
+conditions:
+  ref_name:
+    - "main"
+rules:
+  - type: "pull_request"
+    parameters:
+      required_reviewers: 1
+      dismiss_stale_reviews: true
+      require_code_owner_review: false
+  - type: "required_status_checks"
+    parameters:
+      strict: true
+      required_checks:
+        - "build"
+        - "link-check"
+  - type: "non_fast_forward"
+    parameters:
+      allowed: false
+  - type: "force_push"
+    parameters:
+      allowed: false
+  - type: "deletion"
+    parameters:
+      allowed: false
+  - type: "commit_message_pattern"
+    parameters:
+      pattern: "^(feat|fix|docs|style|refactor|perf|test|chore):"
+      message: "コミットメッセージは Conventional Commits に従ってください"
