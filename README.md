@@ -39,6 +39,8 @@ The main `index.html` auto-detects browser language and redirects to the appropr
 │   └── ・・・
 ├── contact/
 │   └── ・・・
+├── MayukoPianoStudio
+│   └── ・・・
 </pre>
 
 ---
